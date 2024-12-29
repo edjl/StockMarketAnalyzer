@@ -1,6 +1,6 @@
 
 ## Stock Market Analyzer
-This is a basic Stock Market Analyzer that analyzes SPY using a variety of methods.
+This is a basic Stock Market Analyzer that analyzes the SPY using a variety of methods.
 Methods currently include:
 - Buy the dip
 - Buy and hold
