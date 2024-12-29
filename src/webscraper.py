@@ -2,7 +2,7 @@ from alpha_vantage.timeseries import TimeSeries
 import os
 import pandas as pd
 
-api_key = ''
+api_key = ''        # Add your API key here
 ts = TimeSeries(key=api_key, output_format='pandas')
 
 symbol = 'SPY'
