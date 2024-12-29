@@ -5,6 +5,9 @@
 #include <sstream>
 #include <vector>
 
+void printHeader();
+void printFooter(std::string startDate, std::string endDate, bool dateExpired);
+
 void printStats(const std::vector<double>& stats, std::string name);
 
 void printBuyHoldStats(const std::vector<double>& stats, int days);

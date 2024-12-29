@@ -19,8 +19,8 @@ int main() {
     setStartEndDates(file, startDate, endDate);
 
 
-    cout << endl << "\t\t\t\tInvested\tProfit\t\tGain\t\tTradeCount" << endl;
     cout << endl;
+    printHeader();
 
     simulateBuyHold(filename);
     cout << endl;
@@ -34,22 +34,19 @@ int main() {
         cout << endl;
     }
 
-    vector<int> emaPeriods = {5, 10, 20, 60, 120, 240};
-    for (int period : emaPeriods) {
+    vector<int> emaPeriodsMomentum = {5, 10, 20};
+    for (int period : emaPeriodsMomentum) {
         simulateEMA(filename, period);
         cout << endl;
     }
-    for (int period : emaPeriods) {
+    vector<int> emaPeriodsMR = {5, 10, 20, 60, 120, 240};
+    for (int period : emaPeriodsMR) {
         simulateMeanReversion(filename, period);
         cout << endl;
     }
 
 
-    cout << "** " << startDate << " - " << endDate << " **" << endl;
-    if (endDate < getLatestMarketDate_Minus2Weeks()) {
-        cout << "** " << "Note: your local .csv file of stock prices is outdated by more than 2 weeks." << " **" 
-            << endl << "Please run the script: src/webscraper.py" << endl << endl;
-    }
+    printFooter(startDate, endDate, endDate < getLatestMarketDate_Minus2Weeks());
 
     return 0;
 }
