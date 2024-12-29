@@ -1,0 +1,1 @@
+This folder holds the .csv files with the price histories of the stocks that webscraper.py downloads.
