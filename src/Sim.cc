@@ -11,7 +11,7 @@ vector<double> initialStats(4, 0.0);
 
 void simulateBuyHold(const string filename) {
     int buyHoldCount = 5;
-    vector<int> buyDays = {1, 7, 15, 30, 90};
+    vector<int> buyDays = {1, 5, 10, 20, 60};
     vector<vector<double>> buyHoldStats(buyHoldCount, initialStats);
     vector<future<void>> buyHoldFutures;
 
